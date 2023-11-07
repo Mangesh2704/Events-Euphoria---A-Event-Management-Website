@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Your packages</h2>
+    
+    <br><br>
+    <table id="myTable" border="1" style="border: 1px solid black;">
+       <thead>
+          <th> username</th>
+          <th> name</th>
+          <th> email </th>
+          <th>package</th>
+          <th>location</th>
+          <th>number of People</th>
+          <th>Date</th>
+          <th>Venue</th>
+       </thead>
+       <tbody id="tableBody">
+          
+       </tbody>
+    </table>
+    <script>
+         var val=localStorage.getItem("inputValue");
+         getPackageData();
+        async function getPackageData(){
+            console.log("username: "+val);
+        const response=await fetch('/api2');
+        const data=await response.json();
+        console.log(data)
+        let table = document.getElementById("tableBody");
+        for(item of data){
+            if(item.username == val){
+                // Create row element
+            let row = document.createElement("tr")
+            
+            // Create cells
+            let c1 = document.createElement("td")
+            let c2 = document.createElement("td")
+            let c3 = document.createElement("td")
+            let c4 = document.createElement("td")
+            let c5 = document.createElement("td")
+            let c6 = document.createElement("td")
+            let c7 = document.createElement("td")
+            let c8 = document.createElement("td")
+                console.log(item.package);
+        
+            // Insert data to cells
+            c1.innerText = item.username;
+            c2.innerText = item.name;
+            c3.innerText = item.email;
+            c4.innerText = item.package;
+            c5.innerText = item.location;
+            c6.innerText = item.noOfPeople;
+            c7.innerText = item.date;
+            c8.innerText = item.veue;
+            
+            
+            // Append cells to row
+            row.appendChild(c1);
+            row.appendChild(c2);
+            row.appendChild(c3);
+            row.appendChild(c4);
+            row.appendChild(c5);
+            row.appendChild(c6);
+            row.appendChild(c7);
+            row.appendChild(c8);
+            
+            // Append row to table body
+            table.appendChild(row)
+            }
+        }
+        }
+        
+    </script>
+</body>
+</html>

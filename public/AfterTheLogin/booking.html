@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Events Euphoria</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <!-- <link type="text/css" rel="stylesheet" href="form/css/bootstrap.min.css" /> -->
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="form/css/style.css" />
+    <style>
+        .logOut{
+            left: 1164px;
+            top: 61px;
+            position: absolute;
+            height: auto;
+            width: 100px;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.61);
+        
+    backdrop-filter: blur(5px);
+    
+            /* background-color: rgb(100, 104, 100); */
+            text-align: center;
+            border-radius: 6px;
+        
+        }
+        .logOut hr{
+            margin: 0;
+        }
+        .logOut div{
+            cursor: pointer;
+            /* background-color: pink; */
+        }
+        .logOut div:hover{
+            background-color: rgb(60, 64, 60);
+        }
+      </style>
+</head>
+
+
+
+<body>
+    <script>
+		function cancel(){
+			document.getElementById('logOutOpt').style.display="none";
+		}
+        function logOutOpt(){
+            document.getElementById('logOutOpt').style.display="block";
+        }
+        function logOut(){
+            window.location.href="../index.html";
+        }
+        function yourPackages(){
+            window.location.href="yourPackages.html"
+        }
+    </script>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Events Euphoria</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="afterLogin.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="packages.html" class="nav-link">Packages</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <!-- <li class="nav-item"><a href="#" class="nav-link">Blog</a></li> -->
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item active"><a href="booking.html" class="nav-link  ">Booking</a></li>
+                    <li class="nav-item cta"><a style="cursor: pointer;" onclick="logOutOpt()" class="nav-link"><span id="reg">Register</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="logOut" id="logOutOpt" style="color: white;">
+            <div style="font-size: 14px;" onclick="yourPackages()"> <b>Your Packages</b></div> 
+            <hr style="background-color: darkslategray;">
+        <div style="font-size: 14px;" onclick="logOut()"><b>Log Out</b></div>
+        <hr style="background-color: darkslategray;">
+        <div style="font-size: 14px;" onclick="cancel()"><b>Cancel</b></div>
+            </div>
+    </nav>
+    <!-- END nav -->
+
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg3.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
+                data-scrollax-parent="true">
+                <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+                    <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span
+                            class="mr-2"><a href="index.html">Home</a></span> <span>Booking</span></p>
+                    <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Event Booking
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div> <br> <br> <br>
+
+    <div id="booking" class="section1">
+        <div class="section-center1">
+            <div class="container">
+                <div class="row">
+                    <div class="booking-form">
+                        <form>
+                            <div class="form-group1">
+                                <span class="form-label1">Choose the Package</span>
+                                <select class="form-control1" required id="selectEvent">
+                                    <option value="not selected" selected hidden>Choose the Package</option>
+                                    <option value="Royal Wedding">Royal Wedding</option>
+                                    <option value="50th birthday">50th Birthday</option>
+                                    <option value="concert">Concert</option>
+                                    <option value="Annual Meet">Annual Meet</option>
+                                    <option value="Sports Events">Destination Wedding</option>
+                                    <option value="Sports Events">1st Birthday</option>
+                                    <option value="Sports Events">Garba Night</option>
+                                    <option value="Sports Events">Award Show</option>
+                                    <option value="Sports Events">Music Festival</option>
+                                    <option value="Sports Events">Baby Shower</option>
+                                    <option value="Sports Events">Decoration</option>
+                                    <option value="Sports Events">Catering</option>
+                                    <option value="Sports Events">Hospitality</option>
+                                    <option value="Sports Events">Banquet Hall</option>
+                                    <option value="Sports Events">Photographer</option>
+                                    <option value="Sports Events">Stage & Sound</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                                
+                            </div>
+                            <div class="form-group1">
+                                <span class="form-label1">Name</span>
+                                <input class="form-control1" type="text" required placeholder="Enter your Name" id="username">               
+                            </div>
+                            <div class="form-group1">
+                                <span class="form-label1">Email</span>
+                                <input class="form-control1" required type="email" placeholder="Enter your Email ID" id="email">
+                            </div>
+                            <div class="form-group1">
+                                <span class="form-label1">Phone</span>
+                                <input class="form-control1" type="tel"  id="phone" placeholder="Enter your Phone number" required>
+                                
+                            </div>
+                            <!-- <div class="form-group1">
+                                <input class="form-control1" type="tel" placeholder="Enter Destination location">
+                                <span class="form-label1">Destination Location</span>
+                            </div> -->
+                            <div class="form-group1">
+                                <span class="form-label1">Location</span>
+                                <select class="form-control1" required id="location">
+                                    <option value="" selected hidden>Location</option>
+                                    <option>Mumbai</option>
+                                    <option>Delhi</option>
+                                    <option>Pune</option>
+                                    <option>Bengaluru</option>
+                                    <option>Kolkata</option>
+                                    <option>Chennai</option>
+                                    <option>Punjab</option>
+                                </select>
+                                <!-- <span class="select-arrow"></span>
+                                <span class="form-label1">Passenger Numbers</span> -->
+                            </div>
+                            <div class="form-group1">
+                                <span class="form-label1">Number of People</span>
+                                <select class="form-control1" required id="noOfPeople">
+                                    <option value="not selected" selected hidden>Number of People</option>
+                                    <option value="Less than 10">Less than 10</option>
+                                    <option value="10-20">10-20</option>
+                                    <option value="25-30">25-30</option>
+                                    <option value="35-40">35-50</option>
+                                    <option value="50-100">50-100</option>
+                                    <option value="More than 100">More than 100</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group1">
+                                        <span class="form-label1">Date</span>
+                                        <input class="form-control1" type="date" required id="date">
+                                    </div>
+                                </div>
+                                <!-- <div class="col-md-6">
+                                    <div class="form-group1">
+                                        <input class="form-control1" type="time" required>
+                                        <span class="form-label1">Pickup Time</span>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="form-group1">
+                                <span class="form-label1">Venue</span>
+                                <input class="form-control1" type="text" required placeholder="Enter the Venue" id="venue">
+                            </div>
+                            <div class="form-btn">
+                                <button class="submit-btn" onclick="bookNow()">Book Now</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<style>
+    /* Apply the following styles to the HTML elements in your provided code */
+
+/* Background styling for the form container */
+#booking {
+    background-color: #f4f4f4; /* Background color */
+    padding: 20px;
+}
+
+/* Form container styling */
+.booking-form {
+    background-color: #fff; /* Background color */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a card-like effect */
+}
+
+/* Text input fields */
+.form-control1 {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Select dropdown */
+.form-control1.select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    background: url("dropdown-arrow.png") no-repeat right center; /* Customize the dropdown arrow */
+    -webkit-appearance: none; /* Remove default dropdown arrow in Webkit browsers */
+}
+
+/* Button styling */
+.submit-btn {
+    background-color: #37af65; /* Background color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #2e9959; /* Background color on hover */
+}
+
+</style>
+    <!-- <script>
+		var val=localStorage.getItem("inputValue");
+        console.log("value: "+val);
+		var reg=document.getElementById('reg');
+		console.log("reg: "+reg);
+		reg.innerHTML=val;
+	</script> -->
+    <script>
+        var val=localStorage.getItem("inputValue");
+        console.log("username: "+val);
+        reg.innerHTML=val;
+        if(val == null){
+            val="Register";
+        }
+        function isnotvalidDate(dateV){
+            currDate=new Date();
+            cY=currDate.getFullYear();
+            cM=currDate.getMonth();
+            cD=currDate.getDate();
+            var dateObject = new Date(dateV);
+            mY=dateObject.getFullYear();
+            mM=dateObject.getMonth();
+            mD=dateObject.getDate();
+            if(mY>=cY){
+                if(mM>=cM){
+                    if(mD>=cD){
+                        return true
+                    }
+                }
+            }
+            return false
+        }
+        console.log("value: "+val);
+        var packageV,nameV,emailV,phoneV,locationV,numberOfPeopleV,dateV,venueV;
+        async function bookNow(){
+            console.log('bokkkk sdfoiasjfasf;')
+            console.log("username: "+val);//
+            packageV=document.getElementById('selectEvent').value;//
+            nameV=document.getElementById('username').value;//
+            emailV=document.getElementById('email').value;//
+            phoneV=document.getElementById('phone').value;//
+            locationV=document.getElementById('location').value;//
+            numberOfPeopleV=document.getElementById("noOfPeople").value;//
+            dateV=document.getElementById("date").value;//
+            venueV=document.getElementById("venue").value;//
+            console.log("lskjf")
+            console.log(packageV,nameV,phoneV,emailV,packageV,locationV,numberOfPeopleV,dateV,venueV,val);
+            if(nameV==""){
+                alert("Enter Name")
+                return
+            }
+            var emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(emailReg.test(emailV)==false){
+                alert("Enter valid email")
+                return
+            }
+            console.log(dateV+"date here")
+            if(phoneV.length<10 || phoneV.length>10){
+                console.log("checking phone")
+                alert('Enter valid phone')
+                return
+            }
+           
+            if(!isnotvalidDate(dateV)){
+                alert("Invalid Date")
+                return
+            }
+            
+          
+            const data={username:val,name:nameV,email:emailV,package:packageV,phone:phoneV,location:locationV,noOfPeople:numberOfPeopleV,date:dateV,veue:venueV};
+         const options={
+          method:'POST',
+          headers:{
+            "Content-Type":"application/json",
+          },
+          body: JSON.stringify(data)
+         }
+         const response=await fetch("/api2",options);
+         const json=await response.json();
+         console.log(json);
+         alert("booking successful");
+        }
+        
+    </script>
+    <script src="form/js/jquery.min.js"></script>
+    <script>
+        $('.form-control1').each(function () {
+            floatedLabel($(this));
+        });
+
+        $('.form-control1').on('input', function () {
+            floatedLabel($(this));
+        });
+
+        function floatedLabel(input) {
+            var $field = input.closest('.form-group1');
+            if (input.val()) {
+                $field.addClass('input-not-empty');
+            } else {
+                $field.removeClass('input-not-empty');
+            }
+        }
+    </script> <br> <br>
+
+    <!-- Footer -->
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Events Euphoria</h2>
+                        <p>Elevate your events with seamless planning and execution through our comprehensive event
+                            management website.</p>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                            <li class="ftco-animate"><a href="https://twitter.com/"><span
+                                        class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.facebook.com/"><span
+                                        class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.instagram.com/"><span
+                                        class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4 ml-md-5">
+                        <h2 class="ftco-heading-2">Events</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="py-2 d-block">Wedding</a></li>
+                            <li><a href="#" class="py-2 d-block">Birthday Party</a></li>
+                            <li><a href="#" class="py-2 d-block">Concert</a></li>
+                            <li><a href="#" class="py-2 d-block">Corporate Events</a></li>
+                            <li><a href="#" class="py-2 d-block">Engagement Ceremony</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Customer Support</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="py-2 d-block">FAQ</a></li>
+                            <li><a href="#" class="py-2 d-block">Registration</a></li>
+                            <li><a href="#" class="py-2 d-block">Events</a></li>
+                            <li><a href="#" class="py-2 d-block">About Us</a></li>
+                            <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Have a Questions?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon icon-map-marker"></span><span class="text">Xavier Institute of
+                                        Engineering, Mahim Causeway, Mahim(West), Mumbai - 400032, Maharashtra,
+                                        India.</span></li>
+                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91
+                                            9876543210</span></a></li>
+                                <li><a href="#"><span class="icon icon-envelope"></span><span
+                                            class="text">eventseuphoria@gmail.com</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This website is
+                        made with <i class="icon-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Events
+                            Euphoria</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

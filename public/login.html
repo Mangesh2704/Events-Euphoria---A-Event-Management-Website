@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events Euphoria</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Events Euphoria</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+          </button>
+    
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="packages.html" class="nav-link">Packages</a></li>
+              <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+              <!-- <li class="nav-item"><a href="#" class="nav-link">Blog</a></li> -->
+              <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+              <button class="button" id="form-open">Login</button>
+            </ul>
+          </div>
+        </div>
+
+
+      </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home">
+      <div class="form_container">
+        <i class="uil uil-times form_close"></i>
+        
+        <!-- Login From -->
+        <div class="form login_form">
+          <form action="#">
+            <h2>Login</h2>
+
+            <div class="input_box">
+              <input type="name" placeholder="username" id="loginUsername" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Enter your password" id="loginPassword" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+
+            <div class="option_field">
+              <span class="checkbox">
+                <input type="checkbox" id="check" />
+                <label for="check">Remember me</label>
+              </span>
+              <a href="#" class="forgot_pw">Forgot password?</a>
+            </div>
+
+            <button class="button" onclick="Login()">Login Now</button>
+
+            <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+          </form>
+        </div>
+
+        <!-- Signup From -->
+        <div class="form signup_form">
+          <form action="#">
+            <h2>Signup</h2>
+
+            <div class="input_box">
+              <input type="name" placeholder="Enter your name" id="signUpUsername" required />
+              <i class="uil:user"></i>
+            </div>
+            <div class="input_box">
+              <input type="email" placeholder="Enter your email" id="signUpEmail" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Create password" id="signUpPassword" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Confirm password" id="signUpConfirmPassword" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+
+            <button class="button" onclick="getData()">Signup Now</button>
+
+            <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+      var usernameV,passwordV,emailV,confirmPasswordV;
+      function readForm(){
+        usernameV=document.getElementById('signUpUsername').value;
+        console.log(usernameV);
+        passwordV=document.getElementById('signUpPassword').value;
+        console.log(passwordV);
+    
+        emailV=document.getElementById('signUpEmail').value;
+        console.log(emailV);
+        confirmPasswordV=document.getElementById('signUpConfirmPassword').value;
+        console.log(confirmPasswordV);
+        console.log(usernameV,passwordV,emailV,confirmPasswordV);
+        
+      }
+      // function decryptCeaser(passwordV){
+      //   const all_letters = "abcdefghijklmnopqrstuvwxyz";
+      //   console.log('in dec ', passwordV)
+      //   const plain_txt = passwordV;
+      //   const key = 3;
+      //   const dict1 = {};
+      //   for (let i = 0; i < all_letters.length; i++) {
+      //       dict1[all_letters[i]] = all_letters[(i - key) % all_letters.length];
+      //   }
+      //   const cipher_txt = [];
+      //   for (let char of plain_txt) {
+      //       if (all_letters.includes(char)) {
+      //           let temp = dict1[char];
+      //           cipher_txt.push(temp);
+      //           console.log('cip1: ',cipher_txt)
+      //       } else {
+      //           let temp = char;
+      //           cipher_txt.push(temp);
+      //           console.log('cip1: ',cipher_txt)
+      //       }
+      //       console.log(cipher_txt+"myname")
+      //     const cipher_txt_str = cipher_txt.join("");
+      //   console.log("cipher text: ", cipher_txt_str);
+      //   return cipher_txt_str;
+      //     }
+      // }
+      function ceaserPassword(passwordV,n){
+        const all_letters = "abcdefghijklmnopqrstuvwxyz";
+        const plain_txt = passwordV;
+        const key = 3;
+        const dict1 = {};
+        for (let i = 0; i < all_letters.length; i++) {
+          if(n==1){
+            console.log("encrypt")
+            dict1[all_letters[i]] = all_letters[(i + key) % all_letters.length];
+          }else{
+            console.log("decrypt")
+            dict1[all_letters[i]] = all_letters[(i - key) % all_letters.length];
+          }
+            
+        }
+
+        const cipher_txt = [];
+        for (let char of plain_txt) {
+            if (all_letters.includes(char)) {
+                let temp = dict1[char];
+                cipher_txt.push(temp);
+            } else {
+                let temp = char;
+                cipher_txt.push(temp);
+            }
+        }
+        const cipher_txt_str = cipher_txt.join("");
+        console.log("cipher text: ", cipher_txt_str);
+        return cipher_txt_str;
+
+
+      }
+      async function getData(){
+        console.log("in");
+        readForm();
+        const response2=await fetch('api');
+         const data2=await response2.json();
+         console.log(data2);
+        for(items of data2){
+          if(usernameV == items.username){
+            alert("username already exists");
+          document.getElementById('signUpUsername').value="";
+      
+        document.getElementById('signUpPassword').value="";
+       
+        document.getElementById('signUpEmail').value="";
+        
+        document.getElementById('signUpConfirmPassword').value="";
+            return;
+          }
+          if(emailV == items.email){
+            alert("email already exists");
+          document.getElementById('signUpUsername').value="";
+      
+        document.getElementById('signUpPassword').value="";
+       
+        document.getElementById('signUpEmail').value="";
+        
+        document.getElementById('signUpConfirmPassword').value="";
+            return;
+          }
+        }
+        if(usernameV.length <=4){
+            alert("username length problem");
+            return
+        }
+        console.log(emailV+",,,,,,,,,,,,,,,,,,,,,,,,,,")
+        var emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(emailReg.test(emailV)==false){
+                alert("Enter valid email")
+                return
+        }
+        if(passwordV.length < 8){
+          alert("password length should be atleast 8 characters")
+          return
+        }
+        
+        if(passwordV !== confirmPasswordV){
+          console.log("password");
+          alert("password doesn't match");
+          return
+        }
+        
+        passwordV=ceaserPassword(passwordV,1);
+        console.log("reture password here: "+passwordV)
+
+
+
+         const data={username:usernameV,email:emailV,password:passwordV,confirmPassword:confirmPasswordV};
+         alert("registration successful");
+         const options={
+          method:'POST',
+          headers:{
+            "Content-Type":"application/json",
+          },
+          body: JSON.stringify(data)
+         }
+         const response=await fetch("/api",options);
+         const json=await response.json();
+         console.log(json);
+
+         const response1=await fetch('api');
+         const data1=await response1.json();
+         console.log(data1);
+      }
+      var loginUsernameV,loginPasswordV;
+      
+      async function Login(){ 
+        console.log("hum login mai hai");
+        
+        usernameV=document.getElementById('loginUsername').value;
+        loginPasswordV=document.getElementById('loginPassword').value;
+        console.log("iam login pas"+loginPasswordV)
+        var value=usernameV;
+        localStorage.setItem("inputValue",value);
+          const response2=await fetch('api');
+         const data2=await response2.json();
+         console.log(data2);
+        var count=0;
+         for(item of data2){
+          console.log("item in ");
+          console.log("username:"+item.username);
+          console.log("pass: "+item.password);
+          console.log("usernameV: "+usernameV);
+         console.log("passwordV: "+loginPasswordV);
+         newPass=loginPasswordV;
+         console.log(newPass+ "heyheyheyheyheyheyheyhey")
+        //  navin=ceaserPassword(newPass,1);
+        //  console.log("navin: "+navin)
+        // loginPasswordV=navin
+         console.log(loginPasswordV+' fjlaskjdf;ajf;a faofj;asfj;asfja;f afjaslf ')
+            if(usernameV == item.username){
+              console.log("in");
+              console.log(usernameV+ "it is")
+              navin=ceaserPassword(newPass,1);
+              loginPasswordV=navin
+              if(loginPasswordV == item.password){
+                count=1;
+                
+                alert("login successful");
+                window.location.href="./AfterTheLogin/afterLogin.html";
+                return;
+              }else{
+                alert("invalid data");
+                return;
+              }
+            }
+         }
+         if(count==0){
+          alert("Invalid Data");
+          document.getElementById('loginUsername').value="";
+          document.getElementById('loginPassword').value="";
+         }
+        }
+    </script>
+
+<!-- <script>
+  function Login() {
+    const username = document.getElementById("loginUsername").value;
+    const password = document.getElementById("loginPassword").value;
+    if (!username || !password) {
+      alert("Please fill in all fields");
+    } else {
+    }
+  }
+
+  function getData() {
+    const name = document.getElementById("signUpUsername").value;
+    const email = document.getElementById("signUpEmail").value;
+    const password = document.getElementById("signUpPassword").value;
+    const confirmPassword = document.getElementById("signUpConfirmPassword").value;
+
+    if (!name || !email || !password || !confirmPassword) {
+      alert("Please fill in all fields");
+    } else if (password !== confirmPassword) {
+      alert("Passwords do not match");
+    } else {
+
+    }
+  }
+</script> -->
+
+  </body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Events Euphoria</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      .logOut{
+          left: 1164px;
+          top: 61px;
+          position: absolute;
+          height: auto;
+          width: 100px;
+          display: none;
+          background-color: rgba(0, 0, 0, 0.61);
+      
+  backdrop-filter: blur(5px);
+  
+          /* background-color: rgb(100, 104, 100); */
+          text-align: center;
+          border-radius: 6px;
+      
+      }
+      .logOut hr{
+          margin: 0;
+      }
+      .logOut div{
+          cursor: pointer;
+          /* background-color: pink; */
+      }
+      .logOut div:hover{
+          background-color: rgb(60, 64, 60);
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function logOutOpt(){
+          document.getElementById('logOutOpt').style.display="block";
+      }
+      function logOut(){
+          window.location.href="../index.html";
+      }
+      function yourPackages(){
+          window.location.href="yourPackages.html"
+      }
+      function cancel(){
+        document.getElementById('logOutOpt').style.display="none";
+      }
+  </script>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Events Euphoria</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="afterLogin.html" onclick="checkLogin()" class="nav-link">Home</a></li>
+          <li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="packages.html" class="nav-link">Packages</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <!-- <li class="nav-item"><a href="#" class="nav-link">Blog</a></li> -->
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="booking.html" class="nav-link">Booking</a></li>
+          <li style="cursor: pointer;" class="nav-item cta"><a onclick="logOutOpt()" class="nav-link"><span id="reg">Register</span></a></li>
+        </ul>
+      </div>
+    </div>
+  
+  
+      <div class="logOut" id="logOutOpt" style="color: white;">
+        <div style="font-size: 14px;" onclick="yourPackages()"> <b>Your Packages</b></div> 
+        <hr style="background-color: darkslategray;">
+    <div style="font-size: 14px;" onclick="logOut()"><b>Log Out</b></div>
+    <hr style="background-color: darkslategray;">
+    <div style="font-size: 14px;" onclick="cancel()"><b>Cancel</b></div>
+        </div>  </nav>
+    <!-- END nav -->
+    
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg2.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">About Us</h1>
+          </div>  
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row d-md-flex">
+	    		<div class="col-md-6 ftco-animate img about-image" style="background-image: url(images/about.jpg);">
+	    		</div>
+	    		<div class="col-md-6 ftco-animate p-md-5">
+		    		<div class="row">
+		          <div class="col-md-12 nav-link-wrap mb-5">
+		            <div class="nav ftco-animate nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+		              <a class="nav-link active" id="v-pills-whatwedo-tab" data-toggle="pill" href="#v-pills-whatwedo" role="tab" aria-controls="v-pills-whatwedo" aria-selected="true">What we do</a>
+
+		              <a class="nav-link" id="v-pills-mission-tab" data-toggle="pill" href="#v-pills-mission" role="tab" aria-controls="v-pills-mission" aria-selected="false">Our mission</a>
+
+		              <a class="nav-link" id="v-pills-goal-tab" data-toggle="pill" href="#v-pills-goal" role="tab" aria-controls="v-pills-goal" aria-selected="false">Our goal</a>
+		            </div>
+		          </div>
+		          <div class="col-md-12 d-flex align-items-center">
+		            
+		            <div class="tab-content ftco-animate" id="v-pills-tabContent">
+
+		              <div class="tab-pane fade show active" id="v-pills-whatwedo" role="tabpanel" aria-labelledby="v-pills-whatwedo-tab">
+		              	<div>
+			                <h2 class="mb-4">Crafting Unforgettable Experiences</h2>
+			              	<p>At Events Euphoria, we are your partners in creating exceptional events from start to finish. Our dedicated team of professionals specializes in event planning, coordination, and execution. We bring your vision to life, meticulously handling every detail, from venue selection and logistics to entertainment, catering, and technology. With a commitment to excellence, we ensure that your event is a seamless, unforgettable experience, tailored to your unique needs and aspirations.</p>
+			                <p>Let us bring your vision to life and make your event a resounding success.</p>
+				            </div>
+		              </div>
+
+		              <div class="tab-pane fade" id="v-pills-mission" role="tabpanel" aria-labelledby="v-pills-mission-tab">
+		                <div>
+			                <h2 class="mb-4">Creating Memorable Moments</h2>
+			              	<p>Our mission is to curate exceptional experiences that linger in the hearts and minds of our clients and their guests. With unwavering dedication and creative passion, we strive to transform your event dreams into a tangible reality. Whether it's a corporate conference, a dream wedding, or a cultural celebration, we are committed to meticulous planning, flawless execution, and the pursuit of perfection at every step.</p>
+			                <p>Your vision is our inspiration, and our mission is to ensure your event is nothing short of extraordinary.</p>
+				            </div>
+		              </div>
+
+		              <div class="tab-pane fade" id="v-pills-goal" role="tabpanel" aria-labelledby="v-pills-goal-tab">
+		                <div>
+			                <h2 class="mb-4">Elevating Every Occasion</h2>
+			              	<p>Our   goal is to elevate every event we touch. We aim to transform ordinary gatherings into extraordinary experiences, leaving a lasting impression on both hosts and guests alike. With a focus on innovation, creativity, and precision, we strive to be the driving force behind events that inspire, connect, and celebrate life's moments, no matter how big or small.</p>
+			                <p>Your satisfaction and the success of your event are at the core of everything we do.</p>
+				            </div>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section bg-light">
+    	<div class="container">
+    		<div class="row justify-content-start mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate">
+          	<span class="subheading">FAQS</span>
+            <h2 class="mb-4"><strong>Frequently</strong> Asked Questions</h2>
+          </div>
+        </div>  
+    		<div class="row">
+    			<div class="col-md-12 ftco-animate">
+    				<div id="accordion">
+    					<div class="row">
+    						<div class="col-md-6">
+    							<div class="card">
+						        <div class="card-header">
+										  <a class="card-link" data-toggle="collapse"  href="#menuone" aria-expanded="true" aria-controls="menuone"> What is an event management system, and how does it benefit me as an event attendee or guest? <span class="collapsed"><i class="icon-plus-circle"></i></span><span class="expanded"><i class="icon-minus-circle"></i></span></a>
+						        </div>
+						        <div id="menuone" class="collapse show">
+						          <div class="card-body">
+												<p>An event management system is a digital tool that enhances your event experience. It benefits you by simplifying registration, providing event details, and facilitating communication with event organizers, making your participation more convenient and enjoyable.</p>
+						          </div>
+						        </div>
+						      </div>
+
+						      <div class="card">
+						        <div class="card-header">
+										  <a class="card-link" data-toggle="collapse"  href="#menutwo" aria-expanded="false" aria-controls="menutwo">How do I register for an event or purchase tickets using the system as an attendee? <span class="collapsed"><i class="icon-plus-circle"></i></span><span class="expanded"><i class="icon-minus-circle"></i></span></a>
+						        </div>
+						        <div id="menutwo" class="collapse">
+						          <div class="card-body">
+												<p>Registering or purchasing tickets is straightforward. Visit the event's website, click on the registration or ticketing link, and follow the on-screen instructions. It's designed to be user-friendly and efficient.</p>
+						          </div>
+						        </div>
+						      </div>
+
+						      <div class="card">
+						        <div class="card-header">
+										  <a class="card-link" data-toggle="collapse"  href="#menu3" aria-expanded="false" aria-controls="menu3"> What if I encounter issues or have questions about the event? Is there customer support available? <span class="collapsed"><i class="icon-plus-circle"></i></span><span class="expanded"><i class="icon-minus-circle"></i></span></a>
+						        </div>
+						        <div id="menu3" class="collapse">
+						          <div class="card-body">
+												<p>If you encounter any issues or have questions, event organizers typically provide customer support contact information. You can reach out via email or phone to receive assistance and address your concerns.</p>
+						          </div>
+						        </div>
+						      </div>
+    						</div>
+
+    						<div class="col-md-6">
+    							<div class="card">
+						        <div class="card-header">
+										  <a class="card-link" data-toggle="collapse"  href="#menu4" aria-expanded="false" aria-controls="menu4">Can I access event details, schedules, and important information on the event's website? <span class="collapsed"><i class="icon-plus-circle"></i></span><span class="expanded"><i class="icon-minus-circle"></i></span></a>
+						        </div>
+						        <div id="menu4" class="collapse">
+						          <div class="card-body">
+												<p>Absolutely! The event's website provides all the essential information, including schedules, speaker profiles, and venue details. It's a one-stop source to help you stay informed about the event.</p>
+						          </div>
+						        </div>
+						      </div>
+
+						      <div class="card">
+						        <div class="card-header">
+										  <a class="card-link" data-toggle="collapse"  href="#menu5" aria-expanded="false" aria-controls="menu5">Is my personal information and payment data secure when I register or purchase tickets online? <span class="collapsed"><i class="icon-plus-circle"></i></span><span class="expanded"><i class="icon-minus-circle"></i></span></a>
+						        </div>
+						        <div id="menu5" class="collapse">
+						          <div class="card-body">
+												<p>Yes, event management systems prioritize security. They use encryption and follow best practices to protect your personal information and payment data, ensuring your online transactions are secure.</p>
+						          </div>
+						        </div>
+						      </div>
+
+						      <div class="card">
+						        <div class="card-header">
+										  <a class="card-link" data-toggle="collapse"  href="#menu6" aria-expanded="false" aria-controls="menu6">How can I request an invoice or receipt for my registration or ticket purchase? <span class="collapsed"><i class="icon-plus-circle"></i></span><span class="expanded"><i class="icon-minus-circle"></i></span></a>
+						        </div>
+						        <div id="menu6" class="collapse">
+						          <div class="card-body">
+												<p>If you require an invoice or receipt for your registration or ticket purchase, contact the event organizer or follow the instructions provided during the registration process to request the necessary documentation.</p>
+						          </div>
+						        </div>
+						      </div>
+    						</div>
+    					</div>
+				    </div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Events Euphoria</h2>
+              <p>Elevate your events with seamless planning and execution through our comprehensive event management website.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://twitter.com/"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Events</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Wedding</a></li>
+                <li><a href="#" class="py-2 d-block">Birthday Party</a></li>
+                <li><a href="#" class="py-2 d-block">Concert</a></li>
+                <li><a href="#" class="py-2 d-block">Corporate Events</a></li>
+                <li><a href="#" class="py-2 d-block">Engagement Ceremony</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Customer Support</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">FAQ</a></li>
+                <li><a href="#" class="py-2 d-block">Registration</a></li>
+                <li><a href="#" class="py-2 d-block">Events</a></li>
+                <li><a href="#" class="py-2 d-block">About Us</a></li>
+                <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Xavier Institute of Engineering, Mahim Causeway, Mahim(West), Mumbai - 400032, Maharashtra, India.</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 9876543210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">eventseuphoria@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Events Euphoria</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+<script>
+  
+   var val=localStorage.getItem("inputValue");
+        console.log("username: "+val);
+        reg.innerHTML=val;
+        if(val == null){
+            val="Register";
+        }
+
+        function checkLogin(){
+          location.reload(true); 
+    console.log("In checkLogin");
+        val=localStorage.getItem("inputValue");
+        console.log("Val: "+val);
+        if(val== null || val=="Register{}"){
+          window.location.href="index.html";
+        }else{
+          window.location.href="afterLogin.html";
+        }
+      }
+</script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+
+    
+  </body>
+</html>

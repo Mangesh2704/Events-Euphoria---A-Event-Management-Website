@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Events Euphoria</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      .logOut{
+          left: 1164px;
+          top: 61px;
+          position: absolute;
+          height: auto;
+          width: 100px;
+          display: none;
+          background-color: rgba(0, 0, 0, 0.61);
+      
+  backdrop-filter: blur(5px);
+  
+          /* background-color: rgb(100, 104, 100); */
+          text-align: center;
+          border-radius: 6px;
+      
+      }
+      .logOut hr{
+          margin: 0;
+      }
+      .logOut div{
+          cursor: pointer;
+          /* background-color: pink; */
+      }
+      .logOut div:hover{
+          background-color: rgb(60, 64, 60);
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function cancel(){
+        document.getElementById('logOutOpt').style.display="none";
+      }
+          function logOutOpt(){
+              document.getElementById('logOutOpt').style.display="block";
+          }
+          function logOut(){
+              window.location.href="../index.html";
+          }
+          function yourPackages(){
+              window.location.href="yourPackages.html"
+          }
+      </script>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Events Euphoria</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item "><a href="afterLogin.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="packages.html" class="nav-link">Packages</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <!-- <li class="nav-item"><a href="#" class="nav-link">Blog</a></li> -->
+          <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="booking.html" class="nav-link">Booking</a></li>
+          <li class="nav-item cta"><a onclick="logOutOpt()" style="cursor: pointer;"  class="nav-link"><span id="reg">Register</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="logOut" id="logOutOpt" style="color: white;">
+      <div style="font-size: 14px;" onclick="yourPackages()"> <b>Your Packages</b></div> 
+      <hr style="background-color: darkslategray;">
+  <div style="font-size: 14px;" onclick="logOut()"><b>Log Out</b></div>
+  <hr style="background-color: darkslategray;">
+  <div style="font-size: 14px;" onclick="cancel()"><b>Cancel</b></div>
+      </div>
+  </nav>
+    <!-- END nav -->
+    
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg3.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Contact</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Contact Us</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<section class="ftco-section contact-section ftco-degree-bg">
+      <div class="container">
+        <div class="row d-flex mb-5 contact-info">
+          <div class="col-md-12 mb-4">
+            <h2 class="h4">Contact Information</h2>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-md-3">
+            <p><span>Address:</span> Xavier Institute of Engineering, Mahim Causeway, Mahim(West), Mumbai - 400032, Maharashtra, India.</p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Phone:</span> <a href="tel://1234567920">+91 9876543210</a></p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Email:</span> <a href="mailto:info@yoursite.com">eventseuphoria@gmail.com</a></p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Website</span> <a href="#">eventseuphoria.in</a></p>
+          </div>
+        </div>
+        <div class="row block-9">
+          <div class="col-md-6 pr-md-5">
+            <form action="#">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name" id="name">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Email" id="email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Subject" id="subject">
+              </div>
+              <div class="form-group">
+                <textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message" >
+
+                </textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" onclick="sendMessage()">
+              </div>
+            </form>
+          
+          </div>
+
+          <div class="col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.420453682604!2d72.83911207520465!3d19.045242882153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c92fb093d785%3A0x38854a716f0ca945!2sXavier%20Institute%20of%20Engineering!5e0!3m2!1sen!2sin!4v1695539655259!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Events Euphoria</h2>
+              <p>Elevate your events with seamless planning and execution through our comprehensive event management website.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://twitter.com/"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Events</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Wedding</a></li>
+                <li><a href="#" class="py-2 d-block">Birthday Party</a></li>
+                <li><a href="#" class="py-2 d-block">Concert</a></li>
+                <li><a href="#" class="py-2 d-block">Corporate Events</a></li>
+                <li><a href="#" class="py-2 d-block">Engagement Ceremony</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Customer Support</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">FAQ</a></li>
+                <li><a href="#" class="py-2 d-block">Registration</a></li>
+                <li><a href="#" class="py-2 d-block">Events</a></li>
+                <li><a href="#" class="py-2 d-block">About Us</a></li>
+                <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Xavier Institute of Engineering, Mahim Causeway, Mahim(West), Mumbai - 400032, Maharashtra, India.</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 9876543210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">eventseuphoria@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Events Euphoria</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+<script>
+   var val=localStorage.getItem("inputValue");
+        console.log("username: "+val);
+        reg.innerHTML=val;
+        if(val == null){
+            val="Register";
+        }
+</script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    <script>
+      function checkLogin(){
+        var val=localStorage.getItem("inputValue");
+        if(val== null || val=="Register{}"){
+          window.location.href="index.html";
+        }else{
+          window.location.href="afterLogin.html";
+        }
+      }
+       
+    </script>
+    <script>
+      var usernameV,passwordV,subjectV,messageV;
+      function clearAll(){
+        console.log("In clear all");
+        document.getElementById('name').value="";
+        document.getElementById('email').value="";
+        document.getElementById('subject').value="";
+        document.getElementById('message').value="";
+      }
+      function readForm(){
+        usernameV=document.getElementById('name').value;
+        console.log(usernameV);
+        emailV=document.getElementById('email').value;
+        console.log(emailV);
+        subjectV=document.getElementById('subject').value;
+        console.log(subjectV);
+        messageV=document.getElementById('message').value;
+        console.log(messageV);
+      }
+      
+      async function sendMessage(){
+        console.log("in");
+        readForm();
+        alert("Message Send");
+        
+         const data={username:usernameV,email:emailV,subject:subjectV,message:messageV};
+         const options={
+          method:'POST',
+          headers:{
+            "Content-Type":"application/json",
+          },
+          body: JSON.stringify(data)
+         }
+         
+         const response=await fetch("/api3",options);
+         const json=await response.json();
+         console.log(json);
+        console.log("near clear");
+        clearAll();
+         const response1=await fetch('api');
+         const data1=await response1.json();
+         console.log(data1);
+         
+      }
+    </script>
+  </body>
+</html>

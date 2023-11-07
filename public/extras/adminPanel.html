@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        h2{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h2> Admin Panel </h2>
+    
+    <br><br>
+    <table id="myTable" border="1" style="border: 1px solid black;">
+       <thead>
+          <th> Username</th>
+          <th> Email </th>
+          <th> Password </th>
+       </thead>
+       <tbody id="tableBody">
+          
+       </tbody>
+    </table>
+ </body>
+ <script>
+    addRow();
+    async function addRow() {
+        const response=await fetch('/api');
+        const data=await response.json();
+        // Get the table body element in which you want to add row
+        let table = document.getElementById("tableBody");
+        
+        for(items of data){
+            if(items.username==""){
+                continue
+            }
+            console.log('1');
+            console.log(items);
+            
+            
+            
+            // Create row element
+            let row = document.createElement("tr")
+            
+            // Create cells
+            let c1 = document.createElement("td")
+            let c2 = document.createElement("td")
+            let c3 = document.createElement("td")
+        
+        
+            // Insert data to cells
+            c1.innerText = items.username;
+            c2.innerText = items.email;
+            c3.innerText = items.password;
+            
+            
+            // Append cells to row
+            row.appendChild(c1);
+            row.appendChild(c2);
+            row.appendChild(c3);
+          
+            
+            // Append row to table body
+            table.appendChild(row)
+        }
+      
+       
+    }
+ </script>   
+  <script>
+        
+    </script>
+</body>
+</html>

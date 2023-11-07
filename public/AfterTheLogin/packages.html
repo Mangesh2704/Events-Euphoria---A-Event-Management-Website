@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Events Euphoria</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+	<style>
+      .logOut{
+          left: 1164px;
+          top: 61px;
+          position: absolute;
+          height: auto;
+          width: 100px;
+          display: none;
+          background-color: rgba(0, 0, 0, 0.61);
+      
+  backdrop-filter: blur(5px);
+  
+          /* background-color: rgb(100, 104, 100); */
+          text-align: center;
+          border-radius: 6px;
+      
+      }
+      .logOut hr{
+          margin: 0;
+      }
+      .logOut div{
+          cursor: pointer;
+          /* background-color: pink; */
+      }
+      .logOut div:hover{
+          background-color: rgb(60, 64, 60);
+      }
+	</style>
+  </head>
+  <body>
+	<script>
+		function cancel(){
+			document.getElementById('logOutOpt').style.display="none";
+		}
+        function logOutOpt(){
+            document.getElementById('logOutOpt').style.display="block";
+        }
+        function logOut(){
+            window.location.href="../index.html";
+        }
+        function yourPackages(){
+            window.location.href="yourPackages.html"
+        }
+    </script>
+    
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Events Euphoria</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="afterLogin.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item active"><a href="packages.html" class="nav-link">Packages</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <!-- <li class="nav-item"><a href="#" class="nav-link">Blog</a></li> -->
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+		  <li class="nav-item "><a href="booking.html" class="nav-link  ">Booking</a></li>
+          <li class="nav-item cta" ><a onclick="logOutOpt()"  class="nav-link" style="cursor: pointer;"><span id="reg"></span></a></li>
+        </ul>
+      </div>
+    </div>
+	<div class="logOut" id="logOutOpt" style="color: white;">
+        <div style="font-size: 14px;" onclick="yourPackages()"> <b>Your Packages</b></div> 
+        <hr style="background-color: darkslategray;">
+    <div style="font-size: 14px;" onclick="logOut()"><b>Log Out</b></div>
+    <hr style="background-color: darkslategray;">
+    <div style="font-size: 14px;" onclick="cancel()"><b>Cancel</b></div>
+        </div>
+       
+  </nav>
+    <!-- END nav -->
+    
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg4.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Packages</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Packages</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <section class="ftco-section ftco-degree-bg">
+      <div class="container">
+        <div class="row">
+        	<div class="col-lg-3 sidebar ftco-animate">
+        		<div class="sidebar-wrap bg-light ftco-animate">
+        			<h3 class="heading mb-4">Find Events
+					</h3>
+        			<form action="#">
+        				<div class="fields">
+		              <div class="form-group">
+		                <input type="text" class="form-control" placeholder="Location">
+		              </div>
+		              <div class="form-group">
+		                <div class="select-wrap one-third">
+	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+	                    <select name="" id="" class="form-control" placeholder="Keyword search">
+	                      <option value="">Mumbai</option>
+	                      <option value="">Delhi</option>
+	                      <option value="">Pune</option>
+	                      <option value="">Bengaluru</option>
+	                      <option value="">Kolkata</option>
+	                    </select>
+	                  </div>
+		              </div>
+		              <div class="form-group">
+		                <input type="text" id="checkin_date" class="form-control" placeholder="Date from">
+		              </div>
+		              <div class="form-group">
+		                <input type="text" id="checkin_date" class="form-control" placeholder="Date to">
+		              </div>
+		              <div class="form-group">
+		              	<div class="range-slider">
+		              		<span>
+										    <input type="number" value="25000" min="0" max="120000"/>	-
+										    <input type="number" value="50000" min="0" max="120000"/>
+										  </span>
+										  <input value="1000" min="0" max="120000" step="500" type="range"/>
+										  <input value="50000" min="0" max="120000" step="500" type="range"/>
+										  </svg>
+										</div>
+		              </div>
+		              <div class="form-group">
+		                <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
+		              </div>
+		            </div>
+	            </form>
+        		</div>
+        		<div class="sidebar-wrap bg-light ftco-animate">
+        			<h3 class="heading mb-4">Star Rating</h3>
+        			<form method="post" class="star-rating">
+							  <div class="form-check">
+									<input type="checkbox" class="form-check-input" id="exampleCheck1">
+									<label class="form-check-label" for="exampleCheck1">
+										<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p>
+									</label>
+							  </div>
+							  <div class="form-check">
+						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+						      <label class="form-check-label" for="exampleCheck1">
+						    	   <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i></span></p>
+						      </label>
+							  </div>
+							  <div class="form-check">
+						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+						      <label class="form-check-label" for="exampleCheck1">
+						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+						     </label>
+							  </div>
+							  <div class="form-check">
+							    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+						      <label class="form-check-label" for="exampleCheck1">
+						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+						      </label>
+							  </div>
+							  <div class="form-check">
+						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+						      <label class="form-check-label" for="exampleCheck1">
+						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+							    </label>
+							  </div>
+							</form>
+        		</div>
+          </div>
+          <div class="col-lg-9">
+          	<div class="row">
+          		<div class="col-md-4 ftco-animate">
+		    				<div class="destination">
+		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/destwedding.jpg);">
+		    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+		    					</a>
+		    					<div class="text p-3">
+		    						<div class="d-flex">
+		    							<div class="one">
+				    						<h3><a href="#">Destination Wedding</a></h3>
+				    						<p class="rate">
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<span>9 Rating</span>
+				    						</p>
+			    						</div>
+			    						<div class="two">
+			    							<span class="price">₹ 90K</span>
+		    							</div>
+		    						</div>
+		    						<p>Say 'I Do' in paradise with our destination wedding services. Create lasting memories in breathtaking locations, with expert planning and seamless execution for your dream wedding abroad</p>
+		    						<p class="days"><span>2 days 3 nights</span></p>
+		    						<hr>
+		    						<p class="bottom-area d-flex">
+		    							<span><i class="icon-map-o"></i> Mangesh</span> 
+		    							<span class="ml-auto"><a href="booking.html">Book Now</a></span>
+		    						</p>
+		    					</div>
+		    				</div>
+		    			</div>
+		    			<div class="col-md-4 ftco-animate">
+		    				<div class="destination">
+		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/birthday1.jpg);">
+		    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+		    					</a>
+		    					<div class="text p-3">
+		    						<div class="d-flex">
+		    							<div class="one">
+				    						<h3><a href="#">1st Birthday</a></h3>
+				    						<p class="rate">
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star-o"></i>
+				    							<span>7 Rating</span>
+				    						</p>
+			    						</div>
+			    						<div class="two">
+			    							<span class="price">₹ 30K</span>
+		    							</div>
+		    						</div>
+		    						<p>Celebrate a milestone with joy and charm at our first birthday event services. We specialize in creating memorable moments for your little one's big day, ensuring a delightful celebration filled with love and laughter</p>
+		    						<p class="days"><span>1 day</span></p>
+		    						<hr>
+		    						<p class="bottom-area d-flex">
+		    							<span><i class="icon-map-o"></i> Saish</span> 
+		    							<span class="ml-auto"><a href="booking.html">Book Now</a></span>
+		    						</p>
+		    					</div>
+		    				</div>
+		    			</div>
+		    			<div class="col-md-4 ftco-animate">
+		    				<div class="destination">
+		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/garba.jpeg);">
+		    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+		    					</a>
+		    					<div class="text p-3">
+		    						<div class="d-flex">
+		    							<div class="one">
+				    						<h3><a href="#">Garba Night</a></h3>
+				    						<p class="rate">
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star-o"></i>
+				    							<span>8 Rating</span>
+				    						</p>
+			    						</div>
+			    						<div class="two">
+			    							<span class="price">₹ 25K</span>
+		    							</div>
+		    						</div>
+		    						<p>Embrace the vibrant rhythms and colors of India at our Garba Night event. Join us for an enchanting evening of traditional dance, music, and cultural celebration, creating unforgettable memories in an immersive atmosphere</p>
+		    						<p class="days"><span>1 night</span></p>
+		    						<hr>
+		    						<p class="bottom-area d-flex">
+		    							<span><i class="icon-map-o"></i> Rakshita</span> 
+		    							<span class="ml-auto"><a href="booking.html">Book Now</a></span>
+		    						</p>
+		    					</div>
+		    				</div>
+		    			</div>
+		    			<div class="col-md-4 ftco-animate">
+		    				<div class="destination">
+		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/award.jpg);">
+		    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+		    					</a>
+		    					<div class="text p-3">
+		    						<div class="d-flex">
+		    							<div class="one">
+				    						<h3><a href="#">Award Show</a></h3>
+				    						<p class="rate">
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star-o"></i>
+				    							<i class="icon-star-o"></i>
+				    							<span>7 Rating</span>
+				    						</p>
+			    						</div>
+			    						<div class="two">
+			    							<span class="price">₹ 27K</span>
+		    							</div>
+		    						</div>
+		    						<p>Elevate your recognition with our award show expertise. From dazzling red carpets to flawless production, we specialize in crafting prestigious and unforgettable award ceremonies that honor excellence and achievement</p>
+		    						<p class="days"><span>1 day / 2 days</span></p>
+		    						<hr>
+		    						<p class="bottom-area d-flex">
+		    							<span><i class="icon-map-o"></i> Divyajothi</span> 
+		    							<span class="ml-auto"><a href="booking.html">Book Now</a></span>
+		    						</p>
+		    					</div>
+		    				</div>
+		    			</div>
+		    			<div class="col-md-4 ftco-animate">
+		    				<div class="destination">
+		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/musicfest.jpg);">
+		    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+		    					</a>
+		    					<div class="text p-3">
+		    						<div class="d-flex">
+		    							<div class="one">
+				    						<h3><a href="#">Music Festival</a></h3>
+				    						<p class="rate">
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star-o"></i>
+				    							<span>8 Rating</span>
+				    						</p>
+			    						</div>
+			    						<div class="two">
+			    							<span class="price">₹ 40K</span>
+		    							</div>
+		    						</div>
+		    						<p>Experience the magic of music at our musical festival. Join us for a euphoric celebration of live performances, diverse genres, and a contagious fest atmosphere that will leave you dancing to rhythm of unforgettable memories</p>
+		    						<p class="days"><span>2 nights</span></p>
+		    						<hr>
+		    						<p class="bottom-area d-flex">
+		    							<span><i class="icon-map-o"></i> Mangesh</span> 
+		    							<span class="ml-auto"><a href="booking.html">Book Now</a></span>
+		    						</p>
+		    					</div>
+		    				</div>
+		    			</div>
+		    			<div class="col-md-4 ftco-animate">
+		    				<div class="destination">
+		    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/babyshower.jpg);">
+		    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+		    					</a>
+		    					<div class="text p-3">
+		    						<div class="d-flex">
+		    							<div class="one">
+				    						<h3><a href="#">Baby Shower</a></h3>
+				    						<p class="rate">
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star"></i>
+				    							<i class="icon-star-o"></i>
+				    							<i class="icon-star-o"></i>
+				    							<span>5 Rating</span>
+				    						</p>
+			    						</div>
+			    						<div class="two">
+			    							<span class="price">₹ 15K</span>
+		    							</div>
+		    						</div>
+		    						<p>Welcome the joy of a new life with our expertly crafted baby shower services. From charming decor to thoughtful details, we specialize in creating heartwarming celebrations that honor the arrival of your little one</p>
+		    						<p class="days"><span>1 day</span></p>
+		    						<hr>
+		    						<p class="bottom-area d-flex">
+		    							<span><i class="icon-map-o"></i> Rakshita</span> 
+		    							<span class="ml-auto"><a href="booking.html">Book Now</a></span>
+		    						</p>
+		    					</div>
+		    				</div>
+		    			</div>
+          	</div>
+          	<div class="row mt-5">
+		          <div class="col text-center">
+		            <div class="block-27">
+		              <ul>
+		                <li><a href="#">&lt;</a></li>
+		                <li class="active"><span>1</span></li>
+		                <li><a href="#">2</a></li>
+		                <li><a href="#">3</a></li>
+		                <li><a href="#">4</a></li>
+		                <li><a href="#">5</a></li>
+		                <li><a href="#">&gt;</a></li>
+		              </ul>
+		            </div>
+		          </div>
+		        </div>
+          </div> <!-- .col-md-8 -->
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+	<footer class="ftco-footer ftco-bg-dark ftco-section">
+		<div class="container">
+		  <div class="row mb-5">
+			<div class="col-md">
+			  <div class="ftco-footer-widget mb-4">
+				<h2 class="ftco-heading-2">Events Euphoria</h2>
+				<p>Elevate your events with seamless planning and execution through our comprehensive event management website.</p>
+				<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+				  <li class="ftco-animate"><a href="https://twitter.com/"><span class="icon-twitter"></span></a></li>
+				  <li class="ftco-animate"><a href="https://www.facebook.com/"><span class="icon-facebook"></span></a></li>
+				  <li class="ftco-animate"><a href="https://www.instagram.com/"><span class="icon-instagram"></span></a></li>
+				</ul>
+			  </div>
+			</div>
+			<div class="col-md">
+			  <div class="ftco-footer-widget mb-4 ml-md-5">
+				<h2 class="ftco-heading-2">Events</h2>
+				<ul class="list-unstyled">
+				  <li><a href="#" class="py-2 d-block">Wedding</a></li>
+				  <li><a href="#" class="py-2 d-block">Birthday Party</a></li>
+				  <li><a href="#" class="py-2 d-block">Concert</a></li>
+				  <li><a href="#" class="py-2 d-block">Corporate Events</a></li>
+				  <li><a href="#" class="py-2 d-block">Engagement Ceremony</a></li>
+				</ul>
+			  </div>
+			</div>
+			<div class="col-md">
+			   <div class="ftco-footer-widget mb-4">
+				<h2 class="ftco-heading-2">Customer Support</h2>
+				<ul class="list-unstyled">
+				  <li><a href="#" class="py-2 d-block">FAQ</a></li>
+				  <li><a href="#" class="py-2 d-block">Registration</a></li>
+				  <li><a href="#" class="py-2 d-block">Events</a></li>
+				  <li><a href="#" class="py-2 d-block">About Us</a></li>
+				  <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+				</ul>
+			  </div>
+			</div>
+			<div class="col-md">
+			  <div class="ftco-footer-widget mb-4">
+				  <h2 class="ftco-heading-2">Have a Questions?</h2>
+				  <div class="block-23 mb-3">
+					<ul>
+					  <li><span class="icon icon-map-marker"></span><span class="text">Xavier Institute of Engineering, Mahim Causeway, Mahim(West), Mumbai - 400032, Maharashtra, India.</span></li>
+					  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 9876543210</span></a></li>
+					  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">eventseuphoria@gmail.com</span></a></li>
+					</ul>
+				  </div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Events Euphoria</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/range.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+	 var val=localStorage.getItem("inputValue");
+	      console.log("username: "+val);
+	      reg.innerHTML=val;
+	      if(val == null){
+	          val="Register";
+	      }
+  </script>
+    
+  </body>
+</html>
