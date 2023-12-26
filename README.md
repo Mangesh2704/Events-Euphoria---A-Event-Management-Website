@@ -74,3 +74,7 @@ You can edit and modify!
 We hope you enjoy your experience with Events Euphoria! If you encounter any issues or have suggestions, please feel free to raise them in the Issues section of this repository. Happy Booking! 🎊🤩
 
 Thank you for choosing Event Euphoria for your event management needs! We hope your events are a tremendous success.
+
+## Live Demo
+
+[Events_Euphoria](./public/index.html)
